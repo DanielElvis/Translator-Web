@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator Web</title>
+    {% include "home_module/include.html" %}
+</head>
+<body>
+
+    
+
+    <form class="content" method="post" >
+
+        {% csrf_token %}
+        
+        <h1 class="title-text">Translator</h1>
+
+        <div class="user-text-contaner">
+            <div class="user-text">
+                <div class="errors">
+                    {{translate_form.user_text.errors}}
+                </div>
+                {{translate_form.user_text}}
+            </div>
+        </div>
+
+        <div class="select-lang-contaner">
+            <div class="select-lang">
+                {{translate_form.select_lang.label_tag}}
+                {{translate_form.select_lang}}
+                {{translate_form.select_lang.errors}}
+            </div>
+        </div>
+
+
+        <div class="result-text-contaner">
+            <textarea name="result-text" id="" class="result-text" placeholder="Result : " readonly >
+                {% if text %}{{text}}{% endif %}
+            </textarea>
+        </div>
+
+        
+
+        <div class="submit-btn-contaner">
+            <button class="submit-btn" type="submit">send</button>
+        </div>
+    </form>
+
+</body>
+</html>
+
