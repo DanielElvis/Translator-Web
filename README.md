@@ -1,5 +1,3 @@
-# Translator-Web
-Built-in web translator with Python language and Django framework
 
 <h1>$\color{deepskyblue}{Translator\ Web}$</h1>
 Web based translator made with Python Language and  Django
